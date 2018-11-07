@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <tabs>
+    <Tab text="Ban">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="14.0" layoutY="14.0" prefHeight="368.0" prefWidth="171.0">
+                     <children>
+                        <CheckBox fx:id="banCheckBoxN1" mnemonicParsing="false" text="#1 Trolling" />
+                        <CheckBox fx:id="banCheckBoxN2" mnemonicParsing="false" text="#2 RDM" />
+                        <CheckBox fx:id="banCheckBoxN3" mnemonicParsing="false" text="#3 Combatlog" />
+                        <CheckBox fx:id="banCheckBoxN4" mnemonicParsing="false" text="#4 VDM" />
+                        <CheckBox fx:id="banCheckBoxN5" mnemonicParsing="false" prefHeight="17.0" prefWidth="171.0" text="#5 Hack verdacht" />
+                        <CheckBox fx:id="banCheckBoxN6" mnemonicParsing="false" text="#6 Schlechtes RP" />
+                        <CheckBox fx:id="banCheckBoxN7" mnemonicParsing="false" text="#7 Bugusing" />
+                        <CheckBox fx:id="banCheckBoxN8" mnemonicParsing="false" text="#8 New Life Verstoß" />
+                        <CheckBox fx:id="banCheckBoxN9" mnemonicParsing="false" text="#9 Beleidigung" />
+                        <CheckBox fx:id="banCheckBoxN10" mnemonicParsing="false" text="#10 Feuerwehr Kill" />
+                        <CheckBox fx:id="banCheckBoxN11" mnemonicParsing="false" text="#11 Support Entzug" />
+                        <CheckBox fx:id="banCheckBoxN12" mnemonicParsing="false" text="#12 Leiche Looten in Safezone" />
+                        <CheckBox fx:id="banCheckBoxN13" mnemonicParsing="false" text="#13 Ausrauben in Safezone" />
+                        <CheckBox fx:id="banCheckBoxN14" mnemonicParsing="false" text="#14 Fahrzeug mutwillig zerstören" />
+                        <CheckBox fx:id="banCheckBoxN15" mnemonicParsing="false" text="#15 Money Duping" />
+                        <CheckBox fx:id="banCheckBoxN16" mnemonicParsing="false" text="#16 Fremdwerbung" />
+                        <CheckBox fx:id="banCheckBoxN17" mnemonicParsing="false" text="#17 Feuerwehr-Fahrzeug Diebstahl" />
+                        <CheckBox fx:id="banCheckBoxN18" mnemonicParsing="false" text="#18 Schießen in Safezone" />
+                        <CheckBox fx:id="banCheckBoxN19" mnemonicParsing="false" text="#19 Missachtung der Serverregeln" />
+                        <CheckBox fx:id="banCheckBoxN20" mnemonicParsing="false" text="#20 Lockpicken in der Safezone" />
+                        <CheckBox fx:id="banCheckBoxN21" mnemonicParsing="false" text="#21 Supportbetrug" />
+                        <CheckBox fx:id="banCheckBoxN22" mnemonicParsing="false" text="#22 Fehlerhafte Ankündigung" />
+                        <CheckBox fx:id="banCheckBoxN24" mnemonicParsing="false" text="#24 Fehlerhafte Tötung" />
+                        <CheckBox fx:id="banCheckBoxN25" mnemonicParsing="false" text="#25 Fehlverhalten im Support" />
+                        <CheckBox fx:id="banCheckBoxN30" mnemonicParsing="false" text="#30 Doppelaccount" />
+                     </children>
+                  </VBox>
+                  <TextArea fx:id="banBegruendung" layoutX="280.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" promptText="Begründung" />
+                  <Label layoutX="280.0" layoutY="263.0" text="Video" />
+                  <Label layoutX="275.0" layoutY="302.0" text="2. Video" />
+                  <Label layoutX="266.0" layoutY="340.0" text="Screenshot" />
+                  <Label layoutX="297.0" layoutY="376.0" text="Logs" />
+                  <TextField fx:id="banVideo1" layoutX="333.0" layoutY="260.0" />
+                  <TextField fx:id="banVideo2" layoutX="333.0" layoutY="298.0" />
+                  <TextField fx:id="banScreenshot" layoutX="333.0" layoutY="336.0" />
+                  <TextField fx:id="banLogs" layoutX="333.0" layoutY="375.0" />
+                  <TextField fx:id="banDauer" layoutX="517.0" layoutY="30.0" promptText="Ban-Dauer" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" onAction="#banComment" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Im Support melden">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="14.0" layoutY="14.0" prefHeight="368.0" prefWidth="171.0">
+                     <children>
+                        <CheckBox fx:id="meldenCheckBoxN1" mnemonicParsing="false" text="#1 Trolling" />
+                        <CheckBox fx:id="meldenCheckBoxN2" mnemonicParsing="false" text="#2 RDM" />
+                        <CheckBox fx:id="meldenCheckBoxN3" mnemonicParsing="false" text="#3 Combatlog" />
+                        <CheckBox fx:id="meldenCheckBoxN4" mnemonicParsing="false" text="#4 VDM" />
+                        <CheckBox fx:id="meldenCheckBoxN5" mnemonicParsing="false" prefHeight="17.0" prefWidth="171.0" text="#5 Hack verdacht" />
+                        <CheckBox fx:id="meldenCheckBoxN6" mnemonicParsing="false" text="#6 Schlechtes RP" />
+                        <CheckBox fx:id="meldenCheckBoxN7" mnemonicParsing="false" text="#7 Bugusing" />
+                        <CheckBox fx:id="meldenCheckBoxN8" mnemonicParsing="false" text="#8 New Life Verstoß" />
+                        <CheckBox fx:id="meldenCheckBoxN9" mnemonicParsing="false" text="#9 Beleidigung" />
+                        <CheckBox fx:id="meldenCheckBoxN10" mnemonicParsing="false" text="#10 Feuerwehr Kill" />
+                        <CheckBox fx:id="meldenCheckBoxN11" mnemonicParsing="false" text="#11 Support Entzug" />
+                        <CheckBox fx:id="meldenCheckBoxN12" mnemonicParsing="false" text="#12 Leiche Looten in Safezone" />
+                        <CheckBox fx:id="meldenCheckBoxN13" mnemonicParsing="false" text="#13 Ausrauben in Safezone" />
+                        <CheckBox fx:id="meldenCheckBoxN14" mnemonicParsing="false" text="#14 Fahrzeug mutwillig zerstören" />
+                        <CheckBox fx:id="meldenCheckBoxN15" mnemonicParsing="false" text="#15 Money Duping" />
+                        <CheckBox fx:id="meldenCheckBoxN16" mnemonicParsing="false" text="#16 Fremdwerbung" />
+                        <CheckBox fx:id="meldenCheckBoxN17" mnemonicParsing="false" text="#17 Feuerwehr-Fahrzeug Diebstahl" />
+                        <CheckBox fx:id="meldenCheckBoxN18" mnemonicParsing="false" text="#18 Schießen in Safezone" />
+                        <CheckBox fx:id="meldenCheckBoxN19" mnemonicParsing="false" text="#19 Missachtung der Serverregeln" />
+                        <CheckBox fx:id="meldenCheckBoxN20" mnemonicParsing="false" text="#20 Lockpicken in der Safezone" />
+                        <CheckBox fx:id="meldenCheckBoxN21" mnemonicParsing="false" text="#21 Supportbetrug" />
+                        <CheckBox fx:id="meldenCheckBoxN22" mnemonicParsing="false" text="#22 Fehlerhafte Ankündigung" />
+                        <CheckBox fx:id="meldenCheckBoxN24" mnemonicParsing="false" text="#24 Fehlerhafte Tötung" />
+                        <CheckBox fx:id="meldenCheckBoxN25" mnemonicParsing="false" text="#25 Fehlverhalten im Support" />
+                        <CheckBox fx:id="meldenCheckBoxN30" mnemonicParsing="false" text="#30 Doppelaccount" />
+                     </children>
+                  </VBox>
+                  <TextArea fx:id="meldenBegruendung" layoutX="280.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" promptText="Begründung" />
+                  <Label layoutX="280.0" layoutY="263.0" text="Video" />
+                  <Label layoutX="275.0" layoutY="302.0" text="2. Video" />
+                  <Label layoutX="266.0" layoutY="340.0" text="Screenshot" />
+                  <Label layoutX="297.0" layoutY="376.0" text="Logs" />
+                  <TextField fx:id="meldenVideo1" layoutX="333.0" layoutY="260.0" />
+                  <TextField fx:id="meldenVideo2" layoutX="333.0" layoutY="298.0" />
+                  <TextField fx:id="meldenScreenshot" layoutX="333.0" layoutY="336.0" />
+                  <TextField fx:id="meldenLogs" layoutX="333.0" layoutY="375.0" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Verwarnung">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="14.0" layoutY="14.0" prefHeight="368.0" prefWidth="171.0">
+                     <children>
+                        <CheckBox fx:id="verWCheckBoxN1" mnemonicParsing="false" text="#1 Trolling" />
+                        <CheckBox fx:id="verWCheckBoxN2" mnemonicParsing="false" text="#2 RDM" />
+                        <CheckBox fx:id="verWCheckBoxN3" mnemonicParsing="false" text="#3 Combatlog" />
+                        <CheckBox fx:id="verWCheckBoxN4" mnemonicParsing="false" text="#4 VDM" />
+                        <CheckBox fx:id="verWCheckBoxN5" mnemonicParsing="false" prefHeight="17.0" prefWidth="171.0" text="#5 Hack verdacht" />
+                        <CheckBox fx:id="verWCheckBoxN6" mnemonicParsing="false" text="#6 Schlechtes RP" />
+                        <CheckBox fx:id="verWCheckBoxN7" mnemonicParsing="false" text="#7 Bugusing" />
+                        <CheckBox fx:id="verWCheckBoxN8" mnemonicParsing="false" text="#8 New Life Verstoß" />
+                        <CheckBox fx:id="verWCheckBoxN9" mnemonicParsing="false" text="#9 Beleidigung" />
+                        <CheckBox fx:id="verWCheckBoxN10" mnemonicParsing="false" text="#10 Feuerwehr Kill" />
+                        <CheckBox fx:id="verWCheckBoxN11" mnemonicParsing="false" text="#11 Support Entzug" />
+                        <CheckBox fx:id="verWCheckBoxN12" mnemonicParsing="false" text="#12 Leiche Looten in Safezone" />
+                        <CheckBox fx:id="verWCheckBoxN13" mnemonicParsing="false" text="#13 Ausrauben in Safezone" />
+                        <CheckBox fx:id="verWCheckBoxN14" mnemonicParsing="false" text="#14 Fahrzeug mutwillig zerstören" />
+                        <CheckBox fx:id="verWCheckBoxN15" mnemonicParsing="false" text="#15 Money Duping" />
+                        <CheckBox fx:id="verWCheckBoxN16" mnemonicParsing="false" text="#16 Fremdwerbung" />
+                        <CheckBox fx:id="verWCheckBoxN17" mnemonicParsing="false" text="#17 Feuerwehr-Fahrzeug Diebstahl" />
+                        <CheckBox fx:id="verWCheckBoxN18" mnemonicParsing="false" text="#18 Schießen in Safezone" />
+                        <CheckBox fx:id="verWCheckBoxN19" mnemonicParsing="false" text="#19 Missachtung der Serverregeln" />
+                        <CheckBox fx:id="verWCheckBoxN20" mnemonicParsing="false" text="#20 Lockpicken in der Safezone" />
+                        <CheckBox fx:id="verWCheckBoxN21" mnemonicParsing="false" text="#21 Supportbetrug" />
+                        <CheckBox fx:id="verWCheckBoxN22" mnemonicParsing="false" text="#22 Fehlerhafte Ankündigung" />
+                        <CheckBox fx:id="verWCheckBoxN24" mnemonicParsing="false" text="#24 Fehlerhafte Tötung" />
+                        <CheckBox fx:id="verWCheckBoxN25" mnemonicParsing="false" text="#25 Fehlverhalten im Support" />
+                        <CheckBox fx:id="verWCheckBoxN30" mnemonicParsing="false" text="#30 Doppelaccount" />
+                     </children>
+                  </VBox>
+                  <TextArea fx:id="verWBegruendung" layoutX="280.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" promptText="Begründung" />
+                  <Label layoutX="280.0" layoutY="263.0" text="Video" />
+                  <Label layoutX="275.0" layoutY="302.0" text="2. Video" />
+                  <Label layoutX="266.0" layoutY="340.0" text="Screenshot" />
+                  <Label layoutX="297.0" layoutY="376.0" text="Logs" />
+                  <TextField fx:id="verWVideo1" layoutX="333.0" layoutY="260.0" />
+                  <TextField fx:id="verWVideo2" layoutX="333.0" layoutY="298.0" />
+                  <TextField fx:id="verWScreenshot" layoutX="333.0" layoutY="336.0" />
+                  <TextField fx:id="verWLogs" layoutX="333.0" layoutY="375.0" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Namechange">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="nameCOlt" layoutX="103.0" layoutY="61.0" />
+                  <TextField fx:id="nameCNew" layoutX="103.0" layoutY="108.0" />
+                  <Label layoutX="22.0" layoutY="65.0" text="Alter Name: " />
+                  <Label layoutX="20.0" layoutY="112.0" text="Neuer Name:" />
+                  <CheckBox fx:id="nameCFree" layoutX="50.0" layoutY="158.0" mnemonicParsing="false" text="Kostenlos?" />
+                  <CheckBox fx:id="nameCReb" layoutX="279.0" layoutY="65.0" mnemonicParsing="false" text="Rebelle" />
+                  <CheckBox fx:id="nameCCiv" layoutX="279.0" layoutY="112.0" mnemonicParsing="false" text="Zivilist" />
+                  <TextField fx:id="nameCFreeWhy" layoutX="144.0" layoutY="154.0" promptText="Warum?" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Ertattung">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="erstatBegruendung" layoutX="44.0" layoutY="57.0" prefHeight="200.0" prefWidth="200.0" promptText="Begründung" />
+                  <TextField fx:id="erstatMenge" layoutX="349.0" layoutY="57.0" />
+                  <TextField fx:id="erstatVideo" layoutX="349.0" layoutY="96.0" />
+                  <TextField fx:id="erstatScreen" layoutX="349.0" layoutY="132.0" />
+                  <CheckBox fx:id="erstatKulanz" layoutX="350.0" layoutY="214.0" mnemonicParsing="false" text="Kulanz?" />
+                  <Label layoutX="276.0" layoutY="61.0" text="Geldmenge" />
+                  <Label layoutX="276.0" layoutY="100.0" text="Video" />
+                  <Label layoutX="276.0" layoutY="136.0" text="Screenshot" />
+                  <Label layoutX="276.0" layoutY="170.0" text="Logs" />
+                  <TextField fx:id="erstatLogs" layoutX="350.0" layoutY="166.0" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Information">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="infoInfo" layoutX="70.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" promptText="Inahlt der Info" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Fall unten">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="fallUInhalt" layoutX="70.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" promptText="Inahlt des Fall unten" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Fall abgelehnt">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="fallAbInhalt" layoutX="70.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" promptText="Inahlt Fall abgelehnt" />
+                  <TextField fx:id="fallAbVid" layoutX="385.0" layoutY="60.0" />
+                  <Label layoutX="334.0" layoutY="64.0" text="Video" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

@@ -1,0 +1,29 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+
+
+
+.text-field {
+   -fx-font-family: "Quicksand";
+   -fx-font-size: 14;
+   -fx-padding: 1,1,1,1;
+   -fx-border-color: black;
+   -fx-border-width: 2;
+   -fx-border-radius: 1;
+   -fx-border: gone;
+   -fx-background-color: transparent;
+   -fx-text-fill: black;
+}
+
+.text-area{
+   -fx-font-family: "Quicksand";
+   -fx-font-size: 14;
+   -fx-padding: 1,1,1,1;
+   -fx-border-color: black;
+   -fx-border-width: 2;
+   -fx-border-radius: 1;
+   -fx-border: gone;
+   -fx-background-color: transparent;
+   -fx-text-fill: black;	
+}
