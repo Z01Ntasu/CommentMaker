@@ -19,7 +19,7 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("CommentMaker - by Natsu");
 			primaryStage.show();
-			primaryStage.getIcons().add(new Image("file:///C:/Users/Gunwa/eclipse-workspace/CommentMakerZ/src/kisspng-computer-icons-gear-clip-art-settings-ico-5ab0ec2ed82034.8505833715215442388853.jpg"));
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
