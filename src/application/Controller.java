@@ -198,7 +198,7 @@ public class Controller {
 	@FXML
 	public TextField verWLogs;
 	
-	///////////////////// Verwarnungs Menu
+	///////////////////// namechange Menu
 	@FXML
 	public CheckBox nameCReb;
 	@FXML
@@ -311,6 +311,64 @@ public class Controller {
 		
 		System.out.println(inhalte);
 	}
+	public void verWComment(ActionEvent event) {
+		ArrayList<Boolean> inhalte = new ArrayList<Boolean>();
+		inhalte.add(verWCheckBoxN1.selectedProperty().get());
+		inhalte.add(verWCheckBoxN2.selectedProperty().get());
+		inhalte.add(verWCheckBoxN3.selectedProperty().get());
+		inhalte.add(verWCheckBoxN4.selectedProperty().get());
+		inhalte.add(verWCheckBoxN5.selectedProperty().get());
+		inhalte.add(verWCheckBoxN6.selectedProperty().get());
+		inhalte.add(verWCheckBoxN7.selectedProperty().get());
+		inhalte.add(verWCheckBoxN8.selectedProperty().get());
+		inhalte.add(verWCheckBoxN9.selectedProperty().get());
+		inhalte.add(verWCheckBoxN10.selectedProperty().get());
+		inhalte.add(verWCheckBoxN11.selectedProperty().get());
+		inhalte.add(verWCheckBoxN12.selectedProperty().get());
+		inhalte.add(verWCheckBoxN13.selectedProperty().get());
+		inhalte.add(verWCheckBoxN14.selectedProperty().get());
+		inhalte.add(verWCheckBoxN15.selectedProperty().get());
+		inhalte.add(verWCheckBoxN16.selectedProperty().get());
+		inhalte.add(verWCheckBoxN17.selectedProperty().get());
+		inhalte.add(verWCheckBoxN18.selectedProperty().get());
+		inhalte.add(verWCheckBoxN19.selectedProperty().get());
+		inhalte.add(verWCheckBoxN20.selectedProperty().get());
+		inhalte.add(verWCheckBoxN21.selectedProperty().get());
+		inhalte.add(verWCheckBoxN22.selectedProperty().get());
+		inhalte.add(verWCheckBoxN24.selectedProperty().get());
+		inhalte.add(verWCheckBoxN25.selectedProperty().get());
+		inhalte.add(verWCheckBoxN30.selectedProperty().get());
+		String verWBegrued = verWBegruendung.getText();
+		String verWVid1 = verWVideo1.getText();
+		String verWVid2 = verWVideo2.getText();
+		String verWScreen = verWScreenshot.getText();
+		String verWLog = verWLogs.getText();
+		
+		
+	}
 	
+	public void nameCComment(ActionEvent event) {
+
+		String alterName = nameCOlt.getText();
+		String neuerName = nameCNew.getText();
+		String kostenlosBegr = nameCFreeWhy.getText();
+		boolean rebselect = nameCReb.selectedProperty().get();
+		boolean civSelect = nameCCiv.selectedProperty().get();
+		boolean freeName = nameCFree.selectedProperty().get();
+		
+		
+	}
+	
+	public void erstattungComment(ActionEvent event) {
+
+		String alterName = nameCOlt.getText();
+		String neuerName = nameCNew.getText();
+		String kostenlosBegr = nameCFreeWhy.getText();
+		boolean rebselect = nameCReb.selectedProperty().get();
+		boolean civSelect = nameCCiv.selectedProperty().get();
+		boolean freeName = nameCFree.selectedProperty().get();
+		
+		
+	}
 	
 }
