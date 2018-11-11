@@ -361,14 +361,27 @@ public class Controller {
 	
 	public void erstattungComment(ActionEvent event) {
 
-		String alterName = nameCOlt.getText();
-		String neuerName = nameCNew.getText();
-		String kostenlosBegr = nameCFreeWhy.getText();
-		boolean rebselect = nameCReb.selectedProperty().get();
-		boolean civSelect = nameCCiv.selectedProperty().get();
-		boolean freeName = nameCFree.selectedProperty().get();
-		
+		String menge = erstatMenge.getText();
+		String erstattVideo = erstatVideo.getText();
+		String erstattScreen = erstatScreen.getText();
+		String erstattLogs = erstatLogs.getText();
+		String erstattBegrued = erstatBegruendung.getText();
+		boolean kulanz = erstatKulanz.selectedProperty().get();
 		
 	}
+	public void informationComment(ActionEvent event) {
+		String info = infoInfo.getText();
+
+	}
+	public void FalluntenComment(ActionEvent event) {
+		String info = fallUInhalt.getText();
+
+	}
+	public void FallAbgelehntComment(ActionEvent event) {
+		String info = fallAbInhalt.getText();
+		String vid = fallAbVid.getText();
+
+	}
 	
+
 }
