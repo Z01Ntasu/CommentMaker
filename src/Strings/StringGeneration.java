@@ -1,10 +1,11 @@
 package Strings;
 
 import java.util.ArrayList;
-
 import application.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
 
 
 public class StringGeneration {
@@ -88,9 +89,27 @@ public class StringGeneration {
 		}
 		mainString += " | ";
 		mainString += banDau + "\n";
+		mainString += banBegrued + "\n";
+		
+		if (banVid1 != "") {
+			mainString += "Video 1. : " + banVid1 + "\n";
+		}
+		if (banVid2 != "") {
+			mainString += "Video 2. : " + banVid2 + "\n";
+		}
+		if (banScreen != "") {
+			mainString += "Screenshot : " + banScreen + "\n";
+		}
+		if (banLog != "") {
+			mainString += "Logs. : " + banLog + "\n";
+		}
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(
+                new StringSelection(mainString), null
+           );
 		
 		System.out.println(mainString);
 	}
-	
+
+
 
 }
