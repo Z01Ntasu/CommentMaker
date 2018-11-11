@@ -2,6 +2,7 @@ package application;
 
 import java.util.ArrayList;
 
+import Strings.StringGeneration;
 import javafx.beans.property.BooleanProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -272,8 +273,8 @@ public class Controller {
 		String banVid2 = banVideo2.getText();
 		String banScreen = banScreenshot.getText();
 		String banLog = banLogs.getText();
+		StringGeneration.createStringBan(inhalte,banBegrued,banDau,banVid1,banVid2,banScreen,banLog);
 		
-		System.out.println(inhalte);
 	}
 	@FXML
 	public void meldenComment(ActionEvent event) {
