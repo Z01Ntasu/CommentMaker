@@ -7,6 +7,7 @@ import javafx.beans.property.BooleanProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -74,6 +75,8 @@ public class Controller {
 	public TextField banScreenshot;
 	@FXML
 	public TextField banLogs;
+	@FXML
+	public Label commentBan;
 	
 	///////////////////// Melden Menu
 	@FXML
@@ -273,7 +276,7 @@ public class Controller {
 		String banVid2 = banVideo2.getText();
 		String banScreen = banScreenshot.getText();
 		String banLog = banLogs.getText();
-		StringGeneration.createStringBan(inhalte,banBegrued,banDau,banVid1,banVid2,banScreen,banLog);
+		StringGeneration.createStringBan(commentBan,inhalte,banBegrued,banDau,banVid1,banVid2,banScreen,banLog);
 		
 	}
 	@FXML

@@ -4,13 +4,15 @@ import java.util.ArrayList;
 import application.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 
 
 public class StringGeneration {
 	
-	public static void createStringBan(ArrayList<Boolean> inhalte,String banBegrued,String banDau,String banVid1,String banVid2,String banScreen,String banLog) {
+	public static void createStringBan(Label commentBan,ArrayList<Boolean> inhalte,String banBegrued,String banDau,String banVid1,String banVid2,String banScreen,String banLog) {
 		String mainString ="";
 		if (inhalte.get(0) == true) {
 			mainString += " #1";
@@ -91,18 +93,20 @@ public class StringGeneration {
 		mainString += banDau + "\n";
 		mainString += banBegrued + "\n";
 		
-		if (banVid1 != "") {
+		if (banVid1.startsWith("h")) {
 			mainString += "Video 1. : " + banVid1 + "\n";
 		}
-		if (banVid2 != "") {
+		if (banVid2.startsWith("h")) {
 			mainString += "Video 2. : " + banVid2 + "\n";
 		}
-		if (banScreen != "") {
+		if (banScreen.startsWith("h")) {
 			mainString += "Screenshot : " + banScreen + "\n";
 		}
-		if (banLog != "") {
-			mainString += "Logs. : " + banLog + "\n";
+		if (banLog.startsWith("h")) {
+			mainString += "Logs : " + banLog + "\n";
 		}
+		commentBan.setText(mainString);
+		
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(
                 new StringSelection(mainString), null
            );
