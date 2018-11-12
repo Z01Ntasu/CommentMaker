@@ -139,6 +139,9 @@ public class Controller {
 	public TextField meldenScreenshot;
 	@FXML
 	public TextField meldenLogs;
+	@FXML 
+	public Label commentSupp;
+	
 	
 	///////////////////// Verwarnungs Menu
 	@FXML
@@ -201,6 +204,8 @@ public class Controller {
 	public TextField verWScreenshot;
 	@FXML
 	public TextField verWLogs;
+	@FXML 
+	public Label commentVerwarn;
 	
 	///////////////////// namechange Menu
 	@FXML
@@ -279,6 +284,7 @@ public class Controller {
 		StringGeneration.createStringBan(commentBan,inhalte,banBegrued,banDau,banVid1,banVid2,banScreen,banLog);
 		
 	}
+	
 	@FXML
 	public void meldenComment(ActionEvent event) {
 		ArrayList<Boolean> inhalte = new ArrayList<Boolean>();
@@ -313,8 +319,11 @@ public class Controller {
 		String meldenScreen = meldenScreenshot.getText();
 		String meldenLog = meldenLogs.getText();
 		
-		System.out.println(inhalte);
+		StringGeneration.createStringSuppMelden(commentSupp, inhalte, meldenBegrued, meldenVid1, meldenVid2, meldenScreen, meldenLog);
+		
+		
 	}
+	
 	public void verWComment(ActionEvent event) {
 		ArrayList<Boolean> inhalte = new ArrayList<Boolean>();
 		inhalte.add(verWCheckBoxN1.selectedProperty().get());
@@ -348,6 +357,7 @@ public class Controller {
 		String verWScreen = verWScreenshot.getText();
 		String verWLog = verWLogs.getText();
 		
+		StringGeneration.createStringVerW(commentVerwarn, inhalte, verWBegrued, verWVid1, verWVid2, verWScreen, verWLog);
 		
 	}
 	
@@ -373,14 +383,19 @@ public class Controller {
 		boolean kulanz = erstatKulanz.selectedProperty().get();
 		
 	}
+	
 	public void informationComment(ActionEvent event) {
 		String info = infoInfo.getText();
 
+		
 	}
+	
+	
 	public void FalluntenComment(ActionEvent event) {
 		String info = fallUInhalt.getText();
 
 	}
+	
 	public void FallAbgelehntComment(ActionEvent event) {
 		String info = fallAbInhalt.getText();
 		String vid = fallAbVid.getText();
