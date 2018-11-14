@@ -18,6 +18,9 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("CommentMaker - by Natsu");
+			primaryStage.getIcons().add(
+					   new Image(
+					      Main.class.getResourceAsStream( "icon.png" ))); 
 			primaryStage.show();
 			
 		} catch(Exception e) {

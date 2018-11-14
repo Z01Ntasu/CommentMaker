@@ -3,7 +3,6 @@ package application;
 import java.util.ArrayList;
 
 import Strings.StringGeneration;
-import javafx.beans.property.BooleanProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;

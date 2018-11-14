@@ -1,11 +1,7 @@
 package Strings;
 
 import java.util.ArrayList;
-import application.Controller;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.time.LocalDateTime;
@@ -401,7 +397,8 @@ public class StringGeneration {
                 new StringSelection(mainString), null
         );
 	}
-	
+
+
 	public static void abgelehntComment (String info,String vid, Label abgelehntString) {
 		String mainString = "";
 		mainString += "#Fall abgelehnt" + "\n";
