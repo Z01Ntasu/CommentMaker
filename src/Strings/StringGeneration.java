@@ -119,7 +119,7 @@ public class StringGeneration {
                 new StringSelection(mainString), null
            );
 		
-		System.out.println(mainString);
+		
 	}
 	
 	public static void createStringVerW(Label commentSupp,ArrayList<Boolean> inhalte,String meldenBegruendung,String meldenVid1,String meldenVid2,String meldenScreen,String meldenLog) {
@@ -224,7 +224,7 @@ public class StringGeneration {
                 new StringSelection(mainString), null
            );
 		
-		System.out.println(mainString);
+		
 	}
 	
 	public static void createStringBan(Label commentBan,ArrayList<Boolean> inhalte,String banBegrued,String banDau,String banVid1,String banVid2,String banScreen,String banLog) {
@@ -326,9 +326,97 @@ public class StringGeneration {
                 new StringSelection(mainString), null
            );
 		
-		System.out.println(mainString);
+		
+	}
+	
+	public static void NameCComment(String alterName,String neuerName ,String kostenlosBegr,boolean rebselect,boolean civSelect,boolean freeName,Label commentNameC) {
+		String mainString = "";
+		double Preis = 0;
+
+		mainString += "#Namechange | ";
+		if(rebselect == true) {
+			mainString += "Reb ";
+			Preis += 1;
+		}
+		if(civSelect == true) {
+			mainString += "Civ";
+			Preis += 0.5;
+		}
+		mainString += "\n";
+		
+		if (freeName == true) {
+			mainString += "Kostenllos weil " + kostenlosBegr + "\n";
+		} else   {
+			mainString += "Kosten : "  + Preis + " Millionen"+ "\n";
+			
+		}
+		
+		mainString += alterName + " --> " + neuerName;
+		commentNameC.setText(mainString);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(
+                new StringSelection(mainString), null
+           );
+		
+	}
+	public static void erstattungComment(String menge,String erstattVideo,String erstattScreen,String erstattLogs,String erstattBegrued,boolean kulanz,Label labelErstattung) {
+		String mainString = "";
+		if(kulanz == true) {
+			mainString += "#Kulanz " + menge + "\n";
+		} else {
+			mainString += "#Erstattung " + menge + "\n";
+		}
+		mainString += erstattBegrued + "\n";
+		
+		if (erstattVideo.startsWith("h")) {
+			mainString += "Video 1. : " + erstattVideo + "\n";
+		}
+		if (erstattScreen.startsWith("h")) {
+			mainString += "Screenshot : " + erstattScreen + "\n";
+		}
+		if (erstattLogs.startsWith("h")) {
+			mainString += "Logs : " + erstattLogs + "\n";
+		}
+		labelErstattung.setText(mainString);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(
+                new StringSelection(mainString), null
+           );
+		
+		
+	}
+	public static void infoComment(String info,Label infoString) {
+		String mainString = "";
+		mainString += "#Information" + "\n";
+		mainString += info;
+		infoString.setText(mainString);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(
+                new StringSelection(mainString), null
+        );
+	} 
+	public static void fallUntenComment(String info,Label untenString) {
+		String mainString = "";
+		mainString += "#Fall unten" + "\n";
+		mainString += info;
+		untenString.setText(mainString);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(
+                new StringSelection(mainString), null
+        );
+	}
+	
+	public static void abgelehntComment (String info,String vid, Label abgelehntString) {
+		String mainString = "";
+		mainString += "#Fall abgelehnt" + "\n";
+		mainString += info + "\n";
+		
+		if(vid.startsWith("h")) {
+			mainString += "Video: " +  vid;
+		}
+		abgelehntString.setText(mainString);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(
+                new StringSelection(mainString), null
+        );
 	}
 
+	
 
 
 }

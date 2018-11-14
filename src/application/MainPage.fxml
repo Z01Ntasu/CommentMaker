@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
   <tabs>
     <Tab text="Ban">
       <content>
@@ -56,7 +56,7 @@
                   <TextField fx:id="banLogs" layoutX="333.0" layoutY="375.0" />
                   <TextField fx:id="banDauer" layoutX="517.0" layoutY="30.0" promptText="Ban-Dauer" />
                   <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" onAction="#banComment" prefHeight="60.0" prefWidth="100.0" text="Copy" />
-                  <Label fx:id="commentBan" layoutX="255.0" layoutY="453.0" text="Leer" />
+                  <Label fx:id="commentBan" layoutX="255.0" layoutY="453.0" text="" />
                </children></AnchorPane>
       </content>
     </Tab>
@@ -103,7 +103,7 @@
                   <TextField fx:id="meldenScreenshot" layoutX="333.0" layoutY="336.0" />
                   <TextField fx:id="meldenLogs" layoutX="333.0" layoutY="375.0" />
                   <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" onAction="#meldenComment" prefHeight="60.0" prefWidth="100.0" text="Copy" />
-                  <Label fx:id="commentSupp" layoutX="255.0" layoutY="453.0" text="Leer" />
+                  <Label fx:id="commentSupp" layoutX="255.0" layoutY="453.0" text="" />
                </children></AnchorPane>
       </content>
     </Tab>
@@ -150,7 +150,7 @@
                   <TextField fx:id="verWScreenshot" layoutX="333.0" layoutY="336.0" />
                   <TextField fx:id="verWLogs" layoutX="333.0" layoutY="375.0" />
                   <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" onAction="#verWComment" prefHeight="60.0" prefWidth="100.0" text="Copy" />
-                  <Label fx:id="commentVerwarn" layoutX="255.0" layoutY="453.0" text="Leer" />
+                  <Label fx:id="commentVerwarn" layoutX="255.0" layoutY="453.0" text="" />
                </children>
             </AnchorPane>
          </content>
@@ -167,7 +167,8 @@
                   <CheckBox fx:id="nameCReb" layoutX="279.0" layoutY="65.0" mnemonicParsing="false" text="Rebelle" />
                   <CheckBox fx:id="nameCCiv" layoutX="279.0" layoutY="112.0" mnemonicParsing="false" text="Zivilist" />
                   <TextField fx:id="nameCFreeWhy" layoutX="144.0" layoutY="154.0" promptText="Warum?" />
-                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" onAction="#nameCComment" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+                  <Label fx:id="commentNameC" layoutX="255.0" layoutY="453.0" />
                </children></AnchorPane>
         </content>
       </Tab>
@@ -185,7 +186,8 @@
                   <Label layoutX="276.0" layoutY="136.0" text="Screenshot" />
                   <Label layoutX="276.0" layoutY="170.0" text="Logs" />
                   <TextField fx:id="erstatLogs" layoutX="350.0" layoutY="166.0" />
-                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" onAction="#erstattungComment" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+                  <Label fx:id="labelErstattung" layoutX="255.0" layoutY="453.0" />
                </children></AnchorPane>
         </content>
       </Tab>
@@ -194,7 +196,8 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
                   <TextArea fx:id="infoInfo" layoutX="70.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" promptText="Inahlt der Info" />
-                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" onAction="#informationComment" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+                  <Label fx:id="infoString" layoutX="255.0" layoutY="453.0" />
                </children></AnchorPane>
         </content>
       </Tab>
@@ -203,7 +206,8 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
                   <TextArea fx:id="fallUInhalt" layoutX="70.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" promptText="Inahlt des Fall unten" />
-                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" onAction="#FalluntenComment" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+                  <Label fx:id="untenString" layoutX="255.0" layoutY="453.0" />
                </children></AnchorPane>
         </content>
       </Tab>
@@ -214,7 +218,8 @@
                   <TextArea fx:id="fallAbInhalt" layoutX="70.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" promptText="Inahlt Fall abgelehnt" />
                   <TextField fx:id="fallAbVid" layoutX="385.0" layoutY="60.0" />
                   <Label layoutX="334.0" layoutY="64.0" text="Video" />
-                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+                  <Button layoutX="630.0" layoutY="470.0" mnemonicParsing="false" onAction="#FallAbgelehntComment" prefHeight="60.0" prefWidth="100.0" text="Copy" />
+                  <Label fx:id="abgelehntString" layoutX="255.0" layoutY="453.0" />
                </children></AnchorPane>
         </content>
       </Tab>

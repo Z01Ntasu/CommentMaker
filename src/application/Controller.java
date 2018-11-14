@@ -220,6 +220,8 @@ public class Controller {
 	public TextField nameCNew;
 	@FXML
 	public TextField nameCFreeWhy;
+	@FXML
+	public Label commentNameC;
 	
 	///////////////////// Erstattung Menu
 	@FXML
@@ -234,18 +236,25 @@ public class Controller {
 	public CheckBox erstatKulanz;
 	@FXML
 	public TextArea erstatBegruendung;
+	@FXML Label labelErstattung;
 	
 	///////////////////// Informations Menu
 	@FXML
 	public TextArea infoInfo;
+	@FXML
+	public Label infoString;
 	///////////////////// Fall unten Menu
 	@FXML
 	public TextArea fallUInhalt;
+	@FXML
+	public Label untenString;
 	///////////////////// Fall abgelehnt Menu
 	@FXML
 	public TextArea fallAbInhalt;
 	@FXML
 	public TextField fallAbVid;	
+	@FXML 
+	public Label abgelehntString;
 	
 	@FXML
 	public void banComment(ActionEvent event) {
@@ -369,7 +378,7 @@ public class Controller {
 		boolean rebselect = nameCReb.selectedProperty().get();
 		boolean civSelect = nameCCiv.selectedProperty().get();
 		boolean freeName = nameCFree.selectedProperty().get();
-		
+		StringGeneration.NameCComment(alterName,neuerName,kostenlosBegr,rebselect,civSelect,freeName,commentNameC);
 		
 	}
 	
@@ -381,25 +390,26 @@ public class Controller {
 		String erstattLogs = erstatLogs.getText();
 		String erstattBegrued = erstatBegruendung.getText();
 		boolean kulanz = erstatKulanz.selectedProperty().get();
-		
+		StringGeneration.erstattungComment(menge, erstattVideo, erstattScreen, erstattLogs, erstattBegrued, kulanz,labelErstattung);
 	}
 	
 	public void informationComment(ActionEvent event) {
 		String info = infoInfo.getText();
-
+		StringGeneration.infoComment(info,infoString);
 		
 	}
 	
 	
 	public void FalluntenComment(ActionEvent event) {
 		String info = fallUInhalt.getText();
+		StringGeneration.fallUntenComment(info, untenString);
 
 	}
 	
 	public void FallAbgelehntComment(ActionEvent event) {
 		String info = fallAbInhalt.getText();
 		String vid = fallAbVid.getText();
-
+		StringGeneration.abgelehntComment(info, vid, abgelehntString);
 	}
 	
 
