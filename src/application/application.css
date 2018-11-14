@@ -1,7 +1,9 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
 
-
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #004C91;
+}
 
 
 .text-field {
@@ -11,7 +13,6 @@
    -fx-border-color: black;
    -fx-border-width: 2;
    -fx-border-radius: 1;
-   -fx-border: gone;
    -fx-background-color: transparent;
    -fx-text-fill: black;
 }
@@ -23,7 +24,6 @@
    -fx-border-color: black;
    -fx-border-width: 2;
    -fx-border-radius: 1;
-   -fx-border: gone;
    -fx-background-color: transparent;
    -fx-text-fill: black;	
 }

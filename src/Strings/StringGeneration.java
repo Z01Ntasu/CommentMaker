@@ -341,7 +341,7 @@ public class StringGeneration {
 		mainString += "\n";
 		
 		if (freeName == true) {
-			mainString += "Kostenllos weil " + kostenlosBegr + "\n";
+			mainString += "Kostenlos weil " + kostenlosBegr + "\n";
 		} else   {
 			mainString += "Kosten : "  + Preis + " Millionen"+ "\n";
 			
